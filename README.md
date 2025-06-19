@@ -37,7 +37,7 @@ all without JavaScript or backend logic.
 - Zero JavaScript or server-side requirements
 ---
 ## 📦 Installation
-```bash
+
 git clone https://github.com/wuretkhinan/student-portal-html.git
 cd student-portal-html
 
@@ -47,7 +47,9 @@ or build tools needed.
 ---
 
 ## ‍ Usage
+
 Navigate through these core pages:
+
 - `dashboard.html` – Central hub for student portal
 - `register-course.html` – Form to select and submit course registration
 - `transcript.html` – Displays semester-wise grades and GPA
