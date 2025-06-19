@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Role Web Portal + Newspaper Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🗞 Unified Portal System</h1>
+  </header>
+
+  
+  <nav>
+    <details open>
+      <summary tabindex="0">👤 Switch Role</summary>
+      <ul>
+        <li><a href="#admin" aria-label="Admin Section">Admin</a></li>
+        <li><a href="#editor" aria-label="Editor Section">Editor</a></li>
+        <li><a href="#visitor" aria-label="Visitor Section">Visitor</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <section id="admin" aria-labelledby="admin-heading" tabindex="0">
+    <h2 id="admin-heading">Admin Dashboard</h2>
+    <nav aria-label="Admin Navigation">
+      <ul>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Site Settings</a></li>
+      </ul>
+    </nav>
+
+    <form aria-label="Add New User">
+      <fieldset>
+        <legend>Add User</legend>
+        <label>Username: <input type="text" aria-required="true"></label><br>
+        <label>Email: <input type="email"></label>
+      </fieldset>
+    </form>
+
+    <table>
+      <caption>Recent Signups</caption>
+      <tr><th>ID</th><th>Name</th><th>Role</th></tr>
+      <tr><td>1</td><td>Jane</td><td>Editor</td></tr>
+    </table>
+  </section>
+
+  
+  <section id="editor" aria-labelledby="editor-heading" tabindex="0">
+    <h2 id="editor-heading">Editor Tools</h2>
+    <form>
+      <fieldset>
+        <legend>Create New Article</legend>
+        <label>Title: <input type="text"></label><br>
+        <label>Category: 
+          <select>
+            <option>News</option>
+            <option>Opinion</option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+
+    <section aria-label="Draft Articles">
+      <article>
+        <h3>Draft: Economic Review</h3>
+        <p>Status: Awaiting approval</p>
+      </article>
+    </section>
+  </section>
+
+  <section id="visitor" aria-labelledby="visitor-heading" tabindex="0">
+    <h2 id="visitor-heading">The Daily Times</h2>
+    <nav aria-label="Newspaper Navigation">
+      <ul>
+        <li><a href="#">Headlines</a></li>
+        <li><a href="#">Archives</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <article>
+        <h3>📰 Top Story</h3>
+        <p>New reforms shake global economy...</p>
+      </article>
+      <aside>
+        <h4>More Reads</h4>
+        <ul>
+          <li><a href="#">World Politics</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section>
+      <h3>📅 Archive</h3>
+      <table>
+        <thead><tr><th>Date</th><th>Title</th></tr></thead>
+        <tbody>
+          <tr><td>Jun 1</td><td><a href="#">Election Watch</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <h2 id="modal-title">Confirm Logout</h2>
+    <p>Are you sure you want to logout?</p>
+    <button>Yes</button> <button>No</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Unified Portal System</p>
+  </footer>
+</body>
+</html>
